@@ -20,7 +20,7 @@ for ((i=1; i<4; i++))
 do
   for ((j=0; j<i; j++))
   do
-    if [ ${array[$i]} -gt ${array[$j]} ]
+    if [ ${array[$i]} -lt ${array[$j]} ]
     then
 	temp=${array[$j]}
 	array[$j]=${array[$i]}
@@ -28,4 +28,4 @@ do
     fi
   done
 done
-echo -e "Descending order of values\n${array[@]}"
+echo -e "Ascending order of values\n${array[@]}"
